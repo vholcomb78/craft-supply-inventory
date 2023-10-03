@@ -3,21 +3,74 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/core": "^10.3.1",
+    "@emotion/css": "^10.0.27",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "@types/react-router-dom": "^5.3.3",
+    "@typescript-eslint/parser": "^6.7.3",
+    "react": "^18.2.0",
+    "react-dom": "^16.14.0",
+    "react-router-dom": "^5.3.4",
     "react-scripts": "3.4.1"
   },
   "scripts": {
+    "build-storybook": "build-storybook -s public",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint:fix": "npm run lint -- --fix",
+    "lint": "eslint \"**/*.{js,jsx,ts,tsx}\" --ignore-pattern node_modules/",
+    "storybook": "start-storybook -p 9009 -s public"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "plugins": [
+      "emotion"
+    ],
+    "rules": {
+      "react/prefer-stateless-function": [
+        "off"
+      ],
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js",
+            ".jsx",
+            ".tsx"
+          ]
+        }
+      ],
+      "react/forbid-prop-types": [
+        0
+      ],
+      "react/jsx-props-no-spreading": [
+        "off"
+      ],
+      "react/jsx-one-expression-per-line": [
+        "off"
+      ],
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": true
+        }
+      ],
+      "import/no-named-as-default": [
+        0
+      ],
+      "emotion/jsx-import": "error",
+      "emotion/no-vanilla": "error",
+      "emotion/import-from-emotion": "error",
+      "emotion/styled-import": "error",
+      "import/no-unresolved": "off",
+      "import/extensions": "off"
+    }
   },
   "browserslist": {
     "production": [
@@ -30,5 +83,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "storybook": "^5.3.22",
+    "typescript": "^5.2.2"
   }
 }
