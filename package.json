@@ -1,7 +1,6 @@
 {
   "name": "craft-supply-inventory",
   "version": "0.1.0",
-  "homepage": "https://vholcomb78.github.io/crafty-supply-inventory",
   "private": true,
   "dependencies": {
     "@emotion/core": "^10.3.1",
@@ -13,7 +12,6 @@
     "@testing-library/user-event": "^7.2.1",
     "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/parser": "^6.7.3",
-    "gh-pages": "^6.0.0",
     "react": "^18.2.0",
     "react-dom": "^16.14.0",
     "react-router-dom": "^5.3.4",
@@ -27,8 +25,7 @@
     "eject": "react-scripts eject",
     "lint:fix": "npm run lint -- --fix",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\" --ignore-pattern node_modules/",
-    "storybook": "start-storybook -p 9009 -s public",
-    "deploy": "gh-pages -b master -d build"
+    "storybook": "start-storybook -p 9009 -s public"
   },
   "eslintConfig": {
     "extends": "react-app",
