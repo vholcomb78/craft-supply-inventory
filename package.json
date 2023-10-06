@@ -1,5 +1,6 @@
 {
   "name": "craft-supply-inventory",
+  "homepage" : "https://vholcomb78.github.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
